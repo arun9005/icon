@@ -33,7 +33,7 @@ function copy(){
     const iconName = this.getElementsByClassName('icon-name')[0];
     console.log("iconName",iconName);
 
-    navigator.clipboard.writeText(iconName.innerHTML.toString());
+    navigator.clipboard.writeText(`<span class="${iconName.innerHTML.toString()}"></span>`);
     setTimeout(() => {
     this.classList.remove('copying');
     }, 500);

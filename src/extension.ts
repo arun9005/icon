@@ -50,16 +50,18 @@ class SidebarProvider implements vscode.WebviewViewProvider {
         const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'main.js'));
         const nonce = getNonce();
 		
-        // Generate the HTML content with icons and search input
-        const iconsHtml = iconsData.map((icon: any,index:any) => `
-		<div id=${index} class="wrapper">
-		<div class="icon">${icon.svg}</div>
-		<div class="icon-name" data-name="${icon.name}">${icon.name}</div>
-		
-		</div>
-		`).join('');
 
-		
+        const iconsHtml = iconsData.map((icon: any,index:any) => {
+			const title  = `<h2>${icon.name}</h2>`;
+			const icons   =  icon.icons.map((ico: any) => `
+				<div class="wrapper">
+					<div class="icon">${ico.svg}</div>
+					<div class="icon-name" data-foo="${ico.name}" data-name="${ico.name}">${ico.name}</div>
+				</div>
+			`).join('');
+			return `<div class="section">${title}  <div class="icon-tile">${icons}</div> </div>`;
+		}).join('');
+
 		return `<!DOCTYPE html>
 		<html lang="en">
 		<head>
@@ -69,7 +71,7 @@ class SidebarProvider implements vscode.WebviewViewProvider {
 			<title>Webview Sample</title>
 		</head>
 		<body>
-			<h1>SVG Icons Preview</h1>
+			<h1>CareFlow Icons</h1>
 			<input type="text" id="search" placeholder="Search icons...">
 			<div id="icons-container">${iconsHtml}</div>
 			<script nonce="${nonce}" src="${scriptUri}"></script>
