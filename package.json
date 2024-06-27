@@ -3,7 +3,7 @@
   "displayName": "icon",
   "description": "icon",
   "version": "0.0.1",
-  "publisher": "Arun R",
+  "publisher": "arun-r",
   "engines": {
     "vscode": "^1.90.0"
   },

@@ -20,6 +20,8 @@ export function activate(context: vscode.ExtensionContext) {
     } catch (error) {
         console.error('Error reading icons.json:', error);
     }
+
+	
 }
 
 export function deactivate() {}
@@ -47,10 +49,10 @@ class SidebarProvider implements vscode.WebviewViewProvider {
         const styleUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'style.css'));
         const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'main.js'));
         const nonce = getNonce();
-
+		
         // Generate the HTML content with icons and search input
-        const iconsHtml = iconsData.map((icon: any) => `
-		<div class="wrapper">
+        const iconsHtml = iconsData.map((icon: any,index:any) => `
+		<div id=${index} class="wrapper">
 		<div class="icon">${icon.svg}</div>
 		<div class="icon-name" data-name="${icon.name}">${icon.name}</div>
 		
@@ -84,3 +86,4 @@ function getNonce() {
     }
     return text;
 }
+
