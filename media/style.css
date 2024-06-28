@@ -2,6 +2,7 @@
 *,*:before,*:after{
     box-sizing: border-box;
 }
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     margin: 0;
@@ -11,14 +12,22 @@ body {
 h1{
     margin: 0;
     margin-bottom: 20px;
+    padding:0 4px;
+
 
 }
-
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding:0 4px;
+}
 #icons-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 24px;
 }
 .wrapper{
     position: relative;
@@ -26,9 +35,66 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 8px 12px;
-    row-gap:4px;
-    overflow: hidden;
+    padding: 16px 12px;
+    row-gap:10px;
+    cursor: pointer;
+    width: 100%;
+    
+}
+@media (min-width:200px) {
+    .wrapper{
+        width: 50%;
+    }
+}
+@media (min-width:300px) {
+    .wrapper{
+        width: 33%;
+    }
+}
+@media (min-width:400px) {
+    .wrapper{
+        width: 25%;
+    }
+}
+@media (min-width:500px) {
+    .wrapper{
+        width: 20%;
+    }
+}
+@media (min-width:600px) {
+    .wrapper{
+        width: 16%;
+    }
+}
+@media (min-width:700px) {
+    .wrapper{
+        width: 14%;
+    }
+}
+@media (min-width:800px) {
+    .wrapper{
+        width: 12%;
+    }
+}
+@media (min-width:900px) {
+    .wrapper{
+        width: 11%;
+    }
+}
+@media (min-width:1000px) {
+    .wrapper{
+        width: 10%;
+    }
+}
+@media (min-width:1100px) {
+    .wrapper{
+        width: 9%;
+    }
+}
+@media (min-width:1200px) {
+    .wrapper{
+        width: 8%;
+    }
 }
 
 .wrapper::after {
@@ -54,11 +120,16 @@ h1{
   .wrapper.copying::after {
     opacity: 1;
   }
+.section.closed .icon-tile{
+    display: none;
+}
+.section.closed .closeIcon {
+    rotate: -180deg;
+}
 .section h2{
-    margin: 0 0 12px 0;
+    margin: 0;
     font-size: 16px;
     font-weight: 400;
-    color: #ffcc13;
 
 }
 .icon-tile{
@@ -66,8 +137,9 @@ h1{
     flex-wrap: wrap;
 }
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    transition: all .2s ease-in-out;
 }
 .icon-name{
     position: relative;
@@ -84,11 +156,9 @@ h1{
 }
 #search{
     padding: 8px 12px;
-    border: 1px solid #1E8FA3;
-    border-radius: 20px;
+    border: 1px solid ;
+    border-radius: 4px;
     width: 100%;
-    background-color: transparent;
-    color: #fff;
     margin-bottom: 20px;
 }
 .wrapper:hover .icon svg path {
@@ -96,4 +166,28 @@ h1{
 }
 .wrapper:hover .icon-name{
     color: #1E8FA3;
+}
+.wrapper:hover .icon{
+   scale: 1.5;
+}
+svg path {
+    fill: currentColor;
+}
+.closeIcon{
+    width: 20px;
+    height: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all 0.1s ease-in-out;
+
+    &:before{
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid currentColor;
+    }
 }

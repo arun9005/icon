@@ -40,15 +40,21 @@ class SidebarProvider implements vscode.WebviewViewProvider {
         const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'main.js'));
         const nonce = getNonce();
 		
-        const iconsHtml = iconsData.map((icon: any,index:any) => {
+        const iconsHtml = iconsData.map((icon: any) => {
 			const title  = `<h2>${icon.name}</h2>`;
-			const icons   =  icon.icons.map((ico: any) => `
-				<div class="wrapper">
+			const icons   =  icon.icons.map((ico: any,index:any) => `
+				<div class="wrapper" title="${ico.name}">
 					<div class="icon">${ico.svg}</div>
 					<div class="icon-name" data-foo="${ico.name}" data-name="${ico.name}">${ico.name}</div>
 				</div>
 			`).join('');
-			return `<div class="section">${title}  <div class="icon-tile">${icons}</div> </div>`;
+			return `<div class="section">
+			<div class="header">
+			${title}  
+			<div class="closeIcon"></div>
+			</div>
+			<div class="icon-tile">${icons}</div>
+			 </div>`;
 		}).join('');
 
 		return `<!DOCTYPE html>
