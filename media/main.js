@@ -1,12 +1,10 @@
 
 const block = document.getElementsByClassName('wrapper');
 
-
 function filterIcons() {
     const searchInput = document.getElementById('search');
     const filter = searchInput.value.toLowerCase();
     const wrappers = document.getElementsByClassName('wrapper');
-    console.log("filter");
 
     Array.from(wrappers).forEach(wrapper => {
         const icon = wrapper.getElementsByClassName('icon-name')[0];
@@ -26,14 +24,10 @@ copyText = document.getElementsByClassName('wrapper');
 for (var i = 0; i < copyText.length; i++) {
     copyText[i].addEventListener('click', copy, false);
 }
-
 function copy(){
     this.classList.add("copying");
-    console.log("copy working",this);
     const iconName = this.getElementsByClassName('icon-name')[0];
-    console.log("iconName",iconName);
-
-    navigator.clipboard.writeText(`<span class="${iconName.innerHTML.toString()}"></span>`);
+    navigator.clipboard.writeText(`<span class="cfl-icon--${iconName.innerHTML.toString()}"></span>`);
     setTimeout(() => {
     this.classList.remove('copying');
     }, 500);

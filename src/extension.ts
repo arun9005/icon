@@ -3,29 +3,19 @@ import * as path from 'path';
 import * as fs from 'fs';
 
 export function activate(context: vscode.ExtensionContext) {
-    console.log('Congratulations, your extension "webview-sample" is now active!');
-
     const viewType = 'webview-sample.view';
-
     const iconsPath = path.join(context.extensionPath, 'media', 'icon.json');
-    console.log('Icons Path:', iconsPath);
-
     try {
         const iconsData = JSON.parse(fs.readFileSync(iconsPath, 'utf8'));
-        console.log('Icons Data:', iconsData);
-
         context.subscriptions.push(
             vscode.window.registerWebviewViewProvider(viewType, new SidebarProvider(context, iconsData))
         );
     } catch (error) {
         console.error('Error reading icons.json:', error);
     }
-
-	
 }
 
 export function deactivate() {}
-
 class SidebarProvider implements vscode.WebviewViewProvider {
     constructor(
         private readonly context: vscode.ExtensionContext,
@@ -50,7 +40,6 @@ class SidebarProvider implements vscode.WebviewViewProvider {
         const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'main.js'));
         const nonce = getNonce();
 		
-
         const iconsHtml = iconsData.map((icon: any,index:any) => {
 			const title  = `<h2>${icon.name}</h2>`;
 			const icons   =  icon.icons.map((ico: any) => `
