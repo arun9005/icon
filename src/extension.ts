@@ -15,12 +15,12 @@ export function activate(context: vscode.ExtensionContext) {
     }
 }
 
-export function deactivate() {}
+export function deactivate() { }
 class SidebarProvider implements vscode.WebviewViewProvider {
     constructor(
         private readonly context: vscode.ExtensionContext,
         private readonly iconsData: any
-    ) {}
+    ) { }
 
     resolveWebviewView(
         webviewView: vscode.WebviewView,
@@ -39,25 +39,25 @@ class SidebarProvider implements vscode.WebviewViewProvider {
         const styleUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'style.css'));
         const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, 'media', 'main.js'));
         const nonce = getNonce();
-		
+
         const iconsHtml = iconsData.map((icon: any) => {
-			const title  = `<h2>${icon.name}</h2>`;
-			const icons   =  icon.icons.map((ico: any,index:any) => `
+            const title = `<h2>${icon.name}</h2>`;
+            const icons = icon.icons.map((ico: any, index: any) => `
 				<div class="wrapper" title="${ico.name}">
 					<div class="icon">${ico.svg}</div>
 					<div class="icon-name" data-foo="${ico.name}" data-name="${ico.name}">${ico.name}</div>
 				</div>
 			`).join('');
-			return `<div class="section">
+            return `<div class="section">
 			<div class="header">
 			${title}  
 			<div class="closeIcon"></div>
 			</div>
 			<div class="icon-tile">${icons}</div>
 			 </div>`;
-		}).join('');
+        }).join('');
 
-		return `<!DOCTYPE html>
+        return `<!DOCTYPE html>
 		<html lang="en">
 		<head>
 			<meta charset="UTF-8">
@@ -65,8 +65,10 @@ class SidebarProvider implements vscode.WebviewViewProvider {
 			<link href="${styleUri}" rel="stylesheet">
 		</head>
 		<body>
-			<h1>CareFlow Icons</h1>
+        <div class="top-bar">
+        	 <h1>CareFlow Icons</h1>
 			<input type="text" id="search" placeholder="Search icons...">
+            </div>
 			<div id="icons-container">${iconsHtml}</div>
 			<script nonce="${nonce}" src="${scriptUri}"></script>
 		</body>
