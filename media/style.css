@@ -21,7 +21,10 @@ h1{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
-    padding:0 4px;
+    padding: 8px 8px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .1));
+    border-radius: 4px;
+    cursor: pointer;
 }
 #icons-container {
     display: flex;
@@ -188,6 +191,6 @@ svg path {
         height: 0;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        border-top: 6px solid currentColor;
+        border-bottom: 6px solid currentColor;
     }
 }

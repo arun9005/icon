@@ -1,7 +1,7 @@
 
 // toggle
 
-const closeIcons = document.querySelectorAll('.closeIcon');
+const closeIcons = document.querySelectorAll('.header');
 closeIcons.forEach((closeIcon) => {
     closeIcon.addEventListener('click', function() {
         const section = this.closest('.section');
