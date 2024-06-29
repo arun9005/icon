@@ -1,7 +1,7 @@
 {
-  "name": "icon",
-  "displayName": "icon",
-  "description": "icon",
+  "name": "careflowicons",
+  "displayName": "CareFlow Icons",
+  "description": "Preview careflow icons in the panel",
   "version": "0.0.2",
   "publisher": "arun-r",
   "engines": {
@@ -16,24 +16,24 @@
     "viewsContainers": {
       "activitybar": [
           {
-              "id": "webview-sample",
-              "title": "Webview Sample",
-              "icon": "media/icon.svg"
+              "id": "careflow-icons",
+              "title": "Careflow Icons",
+              "icon": "media/iconEye.svg"
           }
       ]
   },
   "views": {
     "webview-sample": [
         {
-            "id": "webview-sample.view",
-            "name": "Webview",
+            "id": "careflow-icons.view",
+            "name": "Careflow Icons",
             "type": "webview"
         }
     ]
 }
   },
   "assets": {
-    "media/icon.png": "media/icon.png",
+    "media/icon.png": "media/iconEye.svg",
     "media/icons.json": "media/icon.json"
 },
   "scripts": {
