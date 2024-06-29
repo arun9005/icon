@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 
 export function activate(context: vscode.ExtensionContext) {
-    const viewType = 'careflow-icons.view';
+    const viewType = 'webview-sample.view';
     const iconsPath = path.join(context.extensionPath, 'media', 'icon.json');
     try {
         const iconsData = JSON.parse(fs.readFileSync(iconsPath, 'utf8'));
@@ -63,7 +63,6 @@ class SidebarProvider implements vscode.WebviewViewProvider {
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link href="${styleUri}" rel="stylesheet">
-			<title>Careflow Icons</title>
 		</head>
 		<body>
 			<h1>CareFlow Icons</h1>

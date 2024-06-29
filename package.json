@@ -16,7 +16,7 @@
     "viewsContainers": {
       "activitybar": [
           {
-              "id": "careflow-icons",
+              "id": "webview-sample",
               "title": "Careflow Icons",
               "icon": "media/iconEye.svg"
           }
@@ -25,7 +25,7 @@
   "views": {
     "webview-sample": [
         {
-            "id": "careflow-icons.view",
+            "id": "webview-sample.view",
             "name": "Careflow Icons",
             "type": "webview"
         }
