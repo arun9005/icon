@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 
 export function activate(context: vscode.ExtensionContext) {
-    const viewType = 'webview-sample.view';
+    const viewType = 'webview.view';
     const iconsPath = path.join(context.extensionPath, 'media', 'icon.json');
     try {
         const iconsData = JSON.parse(fs.readFileSync(iconsPath, 'utf8'));

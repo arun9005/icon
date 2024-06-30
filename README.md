@@ -33,11 +33,11 @@ This VS Code extension allows you to preview icons within a webview panel, provi
 
 ## License
 
-This extension is licensed under the [MIT License](LICENSE).
+This extension is licensed under the  License [LICENCE.md](LICENCE.md).
 
-## Contact
+## Contact  
 
-For support, contact [Arun R](mailto:arunr@carestack.com).
+For support, contact [Arun R (arunr@carestack.com)](mailto:arunr@carestack.com).
 
 ---
 

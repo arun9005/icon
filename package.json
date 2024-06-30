@@ -2,9 +2,9 @@
   "name": "careflowicons",
   "displayName": "CareFlow Icons",
   "description": "Preview careflow icons in the panel",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "publisher": "arun-r",
-  "icon": "media/icon.png",
+  "icon": "media/logo.jpg",
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -17,16 +17,16 @@
     "viewsContainers": {
       "activitybar": [
           {
-              "id": "webview-sample",
+              "id": "webview",
               "title": "Careflow Icons",
               "icon": "media/iconEye.svg"
           }
       ]
   },
   "views": {
-    "webview-sample": [
+    "webview": [
         {
-            "id": "webview-sample.view",
+            "id": "webview.view",
             "name": "Careflow Icons",
             "type": "webview"
         }
@@ -64,7 +64,7 @@
   },
   "author": {
     "name": "Arun R",
-    "email": "yarunr@carestack.com"
+    "email": "arunr@carestack.com"
   },
   "license": "MIT",
   "repository": {
