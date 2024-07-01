@@ -25,7 +25,7 @@ This VS Code extension allows you to preview icons within a webview panel, provi
 
 ## Requirements
 
-- Visual Studio Code version 1.60.0 or higher.
+- Visual Studio Code version 1.90.0 or higher.
 
 ## Known Issues
 
