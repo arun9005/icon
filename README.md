@@ -14,7 +14,7 @@ This VS Code extension allows you to preview icons within a webview panel, provi
    - Go to Extensions (Ctrl/Cmd + Shift + X).
    - Search for "CareFlow Icons".
    - Click Install.
-
+   ![install Extension](https://i.postimg.cc/3Jn3Qb7N/careflow-prevew.gif)
 2. **Open the Icon Preview Panel:**
    - On the sidebar you can see  ![preview icon](https://i.postimg.cc/NMPZP1YJ/Icon-Eye.png).
    - Click on the icon for preview icons
