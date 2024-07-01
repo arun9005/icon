@@ -2,9 +2,9 @@
   "name": "careflowicons",
   "displayName": "CareFlow Icons",
   "description": "Preview careflow icons in the panel",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "arun-r",
-  "icon": "media/logo.jpg",
+  "icon": "media/Eyecon.png",
   "engines": {
     "vscode": "^1.90.0"
   },

@@ -5,7 +5,7 @@ This VS Code extension allows you to preview icons within a webview panel, provi
 ## Features
 
 - **Icon Preview:** View icons in a dedicated webview panel.
-- **Interactive:** Click on icons for more details or actions.
+- **Interactive:** Click on the icons to copy the HTML template.
 
 ## Usage
 
@@ -16,8 +16,8 @@ This VS Code extension allows you to preview icons within a webview panel, provi
    - Click Install.
 
 2. **Open the Icon Preview Panel:**
-   - Open the Command Palette (Ctrl/Cmd + Shift + P).
-   - Type and select "Icon Preview: Open".
+   - On the sidebar you can see  ![preview icon](https://i.postimg.cc/NMPZP1YJ/Icon-Eye.png).
+   - Click on the icon for preview icons
 
 3. **View and Interact:**
    - Icons will be displayed in the webview panel.
