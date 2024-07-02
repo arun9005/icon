@@ -222,8 +222,8 @@ svg path {
     cursor: pointer;
     font-size: 24px;
     transition: transform 0.2s;
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
