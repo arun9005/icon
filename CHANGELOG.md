@@ -7,3 +7,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [released]
 
 # 1.0.0
+
+## [1.0.3]
+### Added
+- Refresh button for fetch latest icons
+- New Icons added
+
+## [1.0.4]
+### Added
+- icons path changed.[]
