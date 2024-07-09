@@ -10,7 +10,7 @@ interface IconSet {
     icons: Icon[];
 }
 
-const ICONS_URL = 'https://raw.githubusercontent.com/arun9005/json/main/icon.json';
+const ICONS_URL = 'https://gitlab.infra.aws.carestack.com/carestack-components/carestack-styles/-/raw/master/styleguide/templates/careflow/01%20-%20GENERAL/icon/icon/icon.json';
 
 export function activate(context: vscode.ExtensionContext) {
     const viewType = 'webview.view';
